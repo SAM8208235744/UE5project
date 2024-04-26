@@ -3,22 +3,19 @@
 
 #include "paw.h"
 
-// Sets default values
 Apaw::Apaw()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	Meshobject = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	RootComponent = Meshobject;
 }
 
-// Called when the game starts or when spawned
 void Apaw::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-// Called every frame
 void Apaw::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

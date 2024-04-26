@@ -12,15 +12,11 @@ class DEMOREPO_API Apaw : public AActor
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
 	Apaw();
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+protected:
+	virtual void BeginPlay() override;
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<UStaticMeshComponent> Meshobject;
 };
